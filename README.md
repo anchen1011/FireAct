@@ -12,7 +12,7 @@
     </a>
 </p>
 
-![teaser](pics/teaser.png)
+![teaser](teaser.png)
 
 
 This repository is based on our publication *FireAct: Toward Language Agent Fine-tuning* ([link](https://fireact-agent.github.io)). It contains prompts, demo code and fine-tuning data we generated. It also includes the description and directory for the model family we fine-tuned. If you use this code or data in your work, please cite:
@@ -68,14 +68,14 @@ Example:
 
 ```
 python generation_react.py \
-	--task hotpotqa \
-	--backend gpt-4 \
-	--promptpath default \
-	--evaluate \
-	--random \
-	--task_split val \
-	--temperature 0 \
-	--task_end_index 5
+    --task hotpotqa \
+    --backend gpt-4 \
+    --promptpath default \
+    --evaluate \
+    --random \
+    --task_split val \
+    --temperature 0 \
+    --task_end_index 5
 ```
 
 See details with command `python generation.py -h`
@@ -108,30 +108,30 @@ Example (FireAct Llama):
 
 ```
 python generation.py \
-	--task hotpotqa \
-	--backend llama \
-	--evaluate \
-	--random \
-	--task_split dev \
-	--task_end_index 5 \
-	--modelpath meta-llama/Llama-2-7b-chat \
-	--add_lora \
-	--alpaca_format \
-	--peftpath forestai/fireact_llama_2_7b_lora 
+    --task hotpotqa \
+    --backend llama \
+    --evaluate \
+    --random \
+    --task_split dev \
+    --task_end_index 5 \
+    --modelpath meta-llama/Llama-2-7b-chat \
+    --add_lora \
+    --alpaca_format \
+    --peftpath forestai/fireact_llama_2_7b_lora 
 ```
 
 Example (FireAct GPT):
 
 ```
 python generation_react.py \
-	--task hotpotqa \
-	--backend ft:gpt-3.5-turbo-0613:<YOUR_MODEL> \
-	--evaluate \
-	--random \
-	--task_split dev \
-	--temperature 0 \
-	--chatgpt_format \
-	--task_end_index 5
+    --task hotpotqa \
+    --backend ft:gpt-3.5-turbo-0613:<YOUR_MODEL> \
+    --evaluate \
+    --random \
+    --task_split dev \
+    --temperature 0 \
+    --chatgpt_format \
+    --task_end_index 5
 ```
 
 See details with command `python generation.py -h`
