@@ -37,13 +37,13 @@ Bibtex code
 Set up OpenAI API key and store in environment variable  (see [here](https://help.openai.com/en/articles/5112595-best-practices-for-api-key-safety))
 
 ```
-export OPENAI_API_KEY=<YOUR_KEY_HERE>
+export OPENAI_API_KEY=<YOUR_KEY>
 ```
  
 Set up SERP API key and store in environment variable (see [here](https://serpapi.com))
 
 ```
-export SERPAPI_API_KEY=<YOUR_KEY_HERE>
+export SERPAPI_API_KEY=<YOUR_KEY>
 ```
 
 Create virtual env, for example with conda
