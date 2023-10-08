@@ -1,0 +1,53 @@
+Solve a question answering task with interleaving Thought, Action, Observation steps. Thought can reason about the current situation, and Action can be two types: 
+(1) search[question], which searches a question on Google and returns a short snippet containing the answer. Note that sometimes the snippet does not contain the answer, and some alternative search might be needed.
+(2) finish[answer], which returns the answer and finishes the task.
+Here are some examples.
+
+
+What is the elevation range for the area that the eastern sector of the Colorado orogeny extends into?
+Thought: I need to first find the eastern sector of the Colorado orogeny extends into what, then find its elevation range.
+Action: search[the eastern sector of the Colorado orogeny extends into what?]
+Observation: the High Plains
+Thought: I need to find the elevation range for the High Plains.
+Action: search[elevation range of the High Plains?]
+Observation: around 1,800 to 7,000 ft
+Thought: I have the answer.
+Action: finish[1,800 to 7,000 ft]
+Observation: Episode finished, reward = 1
+
+
+Musician and satirist Allie Goertz wrote a song about the "The Simpsons" character Milhouse, who Matt Groening named after who?
+Thought: I need to search Milhouse is named after who.
+Action: search[Milhouse is named after who?]
+Observation: U.S. president Richard Nixon
+Thought: I find the answer.
+Action: finish[Richard Nixon]
+Observation: Episode finished, reward = 1
+
+
+Which documentary is about Finnish rock groups, Adam Clayton Powell or The Saimaa Gesture?
+Thought: I need to search documentary Adam Clayton Powell and documentary The Saimaa Gesture to find which is about Finnish rock groups.
+Action: search[documentary Adam Clayton Powell]
+Observation: Adam Clayton Powell (1989). Documentary. The Academy Award¨-nominated Adam Clayton Powell delves into the gripping life and career of the most influential ...
+Thought: I do not get whether it is about Finnish rock groups. I need to search Adam Clayton Powell to make sure.
+Action: search[Adam Clayton Powell]
+Observation: Re-elected for nearly three decades, Powell became a powerful national politician of the Democratic Party, and served as a national spokesman on civil rights ...
+Thought: Adam Clayton Powell is a politican, not Finnish rock groups. I need to search The Saimaa Gesture to make sure.
+Action: search[The Saimaa Gesture documentary]
+Observation: It is a documentary about three Finnish rock groups aboard the steamboat SS Heinävesi on their tour around Lake Saimaa. The Saimaa Gesture. Directed by, Aki ...
+Thought: The Saimaa Gesture is about three Finnish rock groups, so the answer is The Saimaa Gesture.
+Action: finish[The Saimaa Gesture]
+Observation: Episode finished, reward = 1
+
+
+What profession does Nicholas Ray and Elia Kazan have in common?
+Thought: I need to search the profession of Nicholas Ray and Elia Kazan, then find what is common.
+Action: search[Nicholas Ray profession]
+Observation: New York City, U.S.. Occupation(s), Film director, screenwriter, actor. Years active, 1946–1979. Spouses.
+Thought: Nicholas Ray is film director, screenwriter, actor. I need to search Elia Kazan next.
+Action: search[Elia Kazan profession]
+Observation: Occupations. Actor; director; producer; screenwriter. Years active, 1934–1976. Spouses. Molly Day Thacher Kazan. ​. ​. ( m. 1932, until her death in 1963)​.
+Thought: Elia Kazan is actor, director, producer, screenwriter. So the common profession is actor, director, screenwriter
+Action: finish[actor, director, screenwriter]
+Observation: Episode finished, reward = 1
+

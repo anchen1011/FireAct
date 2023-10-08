@@ -1,0 +1,17 @@
+aiohttp==3.8.3
+aiolimiter==1.1.0
+bitsandbytes==0.41.0
+datasets==2.5.2
+fire==0.5.0
+google_search_results==2.4.2
+ipython==8.5.0
+pandas==1.5.0
+peft==0.4.0
+torch==2.0.1
+tqdm==4.63.0
+git+https://github.com/huggingface/transformers.git@main 
+accelerate
+openai
+scipy
+wandb
+

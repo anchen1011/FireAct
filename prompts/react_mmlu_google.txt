@@ -1,0 +1,58 @@
+Solve a question answering task with interleaving Thought, Action, Observation steps. Thought can reason about the current situation, and Action can be two types: 
+(1) search[question], which searches a question on Google and returns a short snippet containing the answer. Note that sometimes the snippet does not contain the answer, and some alternative search might be needed.
+(2) finish[answer], which returns the answer and finishes the task. 
+Here are some examples.
+
+Single choice: A person takes buckets of water from the house and begins to add it to a pond in the yard. After a certain point, the pond
+A. bloats
+B. breaks
+C. sinks
+D. drowns
+Thought: After continuously adding water to a pond, the pond will have more water than it could hold, thus bloats. So the answer is A.
+Action: finish[A]
+Observation: Episode finished, reward = 1
+
+Single choice: Coal is solid rock that began as organic material that was deposited in a swamp. The formation of coal suggests that,
+A. coal is made mostly of skeletal remains of animals.
+B. coal is formed from magma that has solidified over time.
+C. it quickly becomes petrified when water is removed.
+D. geologic processes continue over millions of years.
+Thought: The question is about the formation of coal. I need to first learn how coal is formed.
+Action: search[How is coal formed?]
+Observation: Coal takes millions of years to form Coal contains the energy stored by plants that lived hundreds of millions of years ago in swampy forests. Layers of dirt and rock covered the plants over millions of years. The resulting pressure and heat turned the plants into the substance we call coal.
+Thought: Based on the information, I can check each option. A: coal is made by plants, not animals, so A is false. B: I have no information about if coal is formed from magma yet. I could search "is coal formed from magma" to make sure. C: I have no information about if coal quickly becomes petrified when water is removed. I could search "does coal quicklybecome petrified when water is removed" to make sure. D: Coal takes millions of years to form, so D is possibly true. I could search "is the formulation of coal a geologic process" to make sure.
+Action: search[is the formulation of coal a geologic process]
+Observation: It is formed from plant remains that have been compacted, hardened, chemically altered, and metamorphosed by heat and pressure over geologic time.
+Thought: Seems the formulation of coal is over geologic time, so a geologic process. So the answer is D.
+Action: finish[D]
+Observation: Episode finished, reward = 1
+
+Single choice: A student uses the following characteristics to describe a group of objects in space. 
+* 200 billion stars 
+* 30 million light years from Earth 
+* 500 light years in diameter 
+Which of the following is the student most likely describing?
+A. a galaxy
+B. the universe
+C. a constellation
+D. the solar system
+Thought: These options correspond to space systems of different sizes. I could search what is the diameter of each option to match.
+Action: search[what is the diameter of a galaxy]
+Observation: Most galaxies are 1,000 to 100,000 parsecs in diameter (approximately 3,000 to 300,000 light years) and are separated by distances on the order of millions of parsecs (or megaparsecs).
+Thought: A galaxy is usually 3,000 to 300,000 light years in diameter, which is slightly more than 500 light years. I should search the diameter of the universe next.
+Action: search[what is the diameter of the universe]
+Observation: 93 billion light-years
+Thought: The universe is 93 billion light years in diameter, which is much larger than 500 light years. I should search the diameter of a constellation next.
+Action: search[what is the diameter of a constellation]
+Observation: Its diameter, remarkably, is greater than 10 AU (1.5 billion kilometers!), large enough to fill the entire inner solar system almost as far out as Jupiter.
+Thought: A constellation is usually 10 AU in diameter. I need to convert it into light years.
+Action: search[10 AU to light years]
+Observation: 0.000158125
+Thought: A constellation is usually 0.000158125 light years in diameter, which is much smaller than 500 light years. I should search the diameter of the solar system next.
+Action: Sedna is three times farther away from Earth than Pluto, making it the most distant observable object known in the solar system. It is 143.73 billion km from the Sun, thus giving the Solar System a diameter of 287.46 billion km.
+Thought: The solar system is 287.46 billion km in diameter. I need to convert it into light years.
+Action: search[287.46 billion km to light years]
+Observation: 0.0303845459748716
+Thought: A constellation is usually 0.0303845459748716 light years in diameter, which is much smaller than 500 light years. Given all the information about diameters, the diameter of a galaxy is closest to 500 light years. So the answer is A.
+Action: finish[A]
+Observation: Episode finished, reward = 1

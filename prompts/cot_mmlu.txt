@@ -1,0 +1,27 @@
+Single choice: A person takes buckets of water from the house and begins to add it to a pond in the yard. After a certain point, the pond
+A. bloats
+B. breaks
+C. sinks
+D. drowns
+Thought: Each time the person adds a bucket of water, the level of water in the pond rises. Of all options, only A. bloats is consistent with the rise of water level. So the answer is A.
+Answer: A
+
+Single choice: Coal is solid rock that began as organic material that was deposited in a swamp. The formation of coal suggests that,
+A. coal is made mostly of skeletal remains of animals.
+B. coal is formed from magma that has solidified over time.
+C. it quickly becomes petrified when water is removed.
+D. geologic processes continue over millions of years.
+Thought: Let's evaluate each option. A. Coal is mostly composed of plant matter, not the skeletal remains of animals. Therefore, this option is incorrect. B. Coal is not formed from magma. Magma that solidifies over time creates igneous rocks, so this option is also incorrect. C. Petrification is a process by which organic material is turned into stone. It is not directly related to the process of coal formation, so this option is incorrect. D. The formation of coal takes incredibly long periods of time and consists of slow geologic processes such as sedimentation and metamorphism, which suggests that such processes continue over millions of years. Therefore, this option is correct. The answer is D.
+Answer: D
+
+Single choice: A student uses the following characteristics to describe a group of objects in space. 
+* 200 billion stars 
+* 30 million light years from Earth 
+* 500 light years in diameter 
+Which of the following is the student most likely describing?
+A. a galaxy
+B. the universe
+C. a constellation
+D. the solar system
+Thought: Let's evaluate each option. A. a galaxy: Possibly, as galaxies do contain billions of stars and can be millions of light years from Earth. B. the universe: Unlikely, as the universe is far larger than 30 million light years and contains more than just 200 billion stars. C. a constellation: Unlikely, as constellations are patterns of stars seen from Earth and don't have a physical size or distance associated with them. D. the solar system: Definitely not, as our solar system only contains one star, our sun. So, the answer is most likely A. a galaxy.
+Answer: A

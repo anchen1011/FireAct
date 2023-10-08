@@ -1,0 +1,48 @@
+Solve a question answering task with interleaving Thought, Action, Observation steps. Thought can reason about the current situation, and Action can be two types: 
+(1) search[question], which searches a question on Google and returns a short snippet containing the answer. Note that sometimes the snippet does not contain the answer, and some alternative search might be needed.
+(2) finish[answer], which returns the answer and finishes the task. The answer should be either "yes" or "no".
+Here are some examples.
+
+
+Yes or no: Will the Albany in Georgia reach a hundred thousand occupants before the one in New York?
+Thought: I need to first find the population of Albany, Georgia, then find the population of Albany, New York, then compare them.
+Action: search[what is the current population of Albany, Georgia?]
+Observation: The current population of Albany, Georgia is 68,181 based on our projections of the latest US Census estimates.The last official US Census in 2020 recorded ...
+Thought: Albany, Georgia has 68,181 occupants in 2020.
+Action: search[what is the current population of Albany, New York?]
+Observation: The current population of Albany, New York is 97,593 based on our projections of the latest US Census estimates.The last official US Census in 2020 recorded ...
+Thought: Albany, New York has 97,593 occupants in 2020, which is larger than Albany, Georgia. So Albany in Georgia will not reach a hundred thousand occupants before the one in New York, the answer is no.
+Action: finish[no]
+Observation: Episode finished, reward = 1
+
+
+Yes or no: Do the anchors on Rede Globo speak Chinese?
+Thought: I need to know what is Rede Globo first.
+Action: search[what is Rede Globo?]
+Observation: TV Globo formerly known as Rede Globo, is a Brazilian free-to-air television network, launched by media proprietor Roberto Marinho on 26 April 1965.
+Thought: Rede Globo is a Brazilian television network, and Brazil is not a Chinese-speaking country, so anchors on Rede Globo do not speak Chinese.
+Action: finish[no]
+Observation: Episode finished, reward = 1
+
+
+Yes or no: Would a student of the class of 2017 have amnesia about 9/11?
+Thought: The student's awareness about 9/11 would depend on their age at the time of the event, and if the age is too young, they would not have direct memory of the event. So, I need to first know how old is a student from class of 2017
+Action: search[when is a student from class of 2017 born?]
+Observation: The graduates of the class of 2017 were mostly born in 1999. Here's a look at the world they came up in. They are as old as The Phantom Menace. Midichlorians, Jar-Jar and pod racing have always been part of the Star Wars world for them.
+Thought: If a student is born around 1999, they would have been around 2 years old during the 9/11 attacks in 2001. I need to what age would have amnesia.
+Action: search[what age would have amnesia?]
+Observation: Although infants use their memories to learn new information, few adults can remember events in their lives that happened prior to the age of three. Psychologists at Emory University have now documented that age seven is when these earliest memories tend to fade into oblivion, a phenomenon known as "childhood amnesia."
+Thought: Amnesia happens for events prior to the age of three, so a student of the class of 2017 would have amnesia about 9/11.
+Action: finish[yes]
+Observation: Episode finished, reward = 1
+
+Yes or no: Is average number of peas in a pod enough commas for a billion?
+Thought: I need to know the average number of peas in a pod, and the number of commas for a billion, then compare them.
+Action: search[what is the average number of peas in a pod?]
+Observation: Every pea seed grows into a single pea plant. An average pea plant will have 6 pods with 8 peas per pod, or 48 peas in total.
+Thought: The average number of peas in a pod is 8. I need to know how many commas in a billion.
+Action: search[how many commas in a billion?]
+Observation: A billion is expressed as '1,000,000,000', which amounts to three commas.
+Thought: The average number of peas in a pod (8 peas) is indeed greater than the number of commas used in a billion (3 commas), so the answer is yes.
+Action: finish[yes]
+Observation: Episode finished, reward = 1.
