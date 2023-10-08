@@ -15,7 +15,7 @@
 ![teaser](teaser.png)
 
 
-This repository is based on our publication *FireAct: Toward Language Agent Fine-tuning* ([link](https://fireact-agent.github.io)). It contains prompts, demo code and fine-tuning data we generated. It also includes the description and directory for the model family we fine-tuned. If you use this code or data in your work, please cite:
+This repository is based on our publication *FireAct: Toward Language Agent Fine-tuning* ([PDF](https://fireact-agent.github.io)). It contains prompts, demo code and fine-tuning data we generated. It also includes the description and directory for the model family we fine-tuned. If you use this code or data in your work, please cite:
 
 ```
 Bibtex code
