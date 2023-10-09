@@ -23,7 +23,7 @@ Llama/CodeLlama Fine-tune Example:
 #### Llama/CodeLlama LoRA
 Example of fine-tuning Llama-2-7b-chat-hf with HotpotQA trajectories:
 
-(This command was tested on single RTX 4090 24GB)
+(This command was tested on single RTX 4090 24GB GPU)
 
 ```
 python llama_lora/finetune.py \
@@ -40,7 +40,7 @@ python llama_lora/finetune.py \
 #### Llama/CodeLlama Full Model
 Example of fine-tuning Llama-2-7b-chat-hf with HotpotQA trajectories:
 
-(This command was tested on four A100 80GB)
+(This command was tested on four A100 80GB GPUs)
 
 ```
 torchrun --nnodes 1 --nproc_per_node 4 llama_full/train.py \
