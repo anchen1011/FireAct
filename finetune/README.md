@@ -35,7 +35,7 @@ Example of fine-tuning Llama-2-7b-chat-hf with HotpotQA trajectories:
 
 ```
 cd finetune/llama_full
-torchrun --nnodes 1 --nproc_per_node 4 train.py \
+torchrun --nnodes 1 --nproc_per_node 4 finetune.py \
     --model_name_or_path meta-llama/Llama-2-7b-chat-hf \
     --data_path ../../data/finetune/alpaca_format/hotpotqa.json \
     --bf16 True \
