@@ -67,7 +67,7 @@ pip install -r requirements.txt
 Example:
 
 ```
-python generation_react.py \
+python generation.py \
     --task hotpotqa \
     --backend gpt-4 \
     --promptpath default \
