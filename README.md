@@ -92,7 +92,7 @@ Example:
 cd finetune/llama_lora
 python finetune.py \
     --base_model meta-llama/Llama-2-13b-chat-hf \
-    --data_path ../../data/finetune/hotpotqa_alpaca.json \
+    --data_path ../../data/finetune/alpaca_format/hotpotqa.json \
     --micro_batch_size 8 \
     --num_epochs 30 \
     --output_dir ../../models/lora/fireact-llama-2-13b \

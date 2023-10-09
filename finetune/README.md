@@ -1,11 +1,17 @@
 # Fine-tune
 
 
-## LoRA
+## Data
 
-## Full Model
+See [Fine-tune Data](https://github.com/anchen1011/FireAct/tree/main/data)
 
-## GPT
+## Training
+
+#### LoRA
+
+#### Full Model
+
+#### GPT
 
 See [OpenAI Fine-tuning Guide](https://platform.openai.com/docs/guides/fine-tuning)
 
