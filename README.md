@@ -123,7 +123,7 @@ python generation.py \
 Example (FireAct GPT):
 
 ```
-python generation_react.py \
+python generation.py \
     --task hotpotqa \
     --backend ft:gpt-3.5-turbo-0613:<YOUR_MODEL> \
     --evaluate \
