@@ -3,6 +3,7 @@
 
 ## Data
 See [Fine-tune Data](https://github.com/anchen1011/FireAct/tree/main/data).
+
 The training data in Alpaca Format used for fine-tuning Llama/CodeLlama models can be founded in [Llama/CodeLlama Fine-tune Data](https://github.com/anchen1011/FireAct/tree/main/data/finetune/alpaca_format).
 
 Llama/CodeLlama Fine-tune Example:
@@ -21,7 +22,9 @@ Llama/CodeLlama Fine-tune Example:
 
 #### Llama/CodeLlama LoRA
 Example of fine-tuning Llama-2-7b-chat-hf with HotpotQA trajectories:
+
 (This command was tested on single RTX 4090 24GB)
+
 ```
 python llama_lora/finetune.py \
      --base_model meta-llama/Llama-2-7b-chat-hf \
@@ -36,7 +39,9 @@ python llama_lora/finetune.py \
 
 #### Llama/CodeLlama Full Model
 Example of fine-tuning Llama-2-7b-chat-hf with HotpotQA trajectories:
+
 (This command was tested on four A100 80GB)
+
 ```
 torchrun --nnodes 1 --nproc_per_node 4 llama_full/train.py \
     --model_name_or_path meta-llama/Llama-2-7b-chat-hf \
