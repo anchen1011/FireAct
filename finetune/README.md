@@ -2,33 +2,23 @@
 
 
 ## Data
+
 See [Fine-tune Data](https://github.com/anchen1011/FireAct/tree/main/data).
-
-The training data in Alpaca Format used for fine-tuning Llama/CodeLlama models can be founded in [Llama/CodeLlama Fine-tune Data](https://github.com/anchen1011/FireAct/tree/main/data/finetune/alpaca_format).
-
-Llama/CodeLlama Fine-tune Example:
-```
-[
-{
-     "instruction": "Who was once considered the best kick boxer in the world, however he has been involved in a number of controversies relating to his \"unsportsmanlike conducts\" in the sport and crimes of violence outside of the ring.",
-     "input": "",
-     "output": "Thought: I need to search for the best kick boxer in the world who has been involved in unsportsmanlike conducts and crimes of violence outside of the ring.\nAction: search[best kick boxer in the world unsportsmanlike conducts crimes of violence]\nObservation: Badr Hari (born 8 December 1984) is a Moroccan-Dutch kickboxer. He is a former K-1 Heavyweight World Champion (2007\u20132008), It's Showtime Heavyweight World ...\nThought: Badr Hari is the person who fits the description.\nAction: finish[Badr Hari]\nObservation: Episode finished, reward = True\n"
-},
-]
-```
 
 
 ## Training
 
 #### Llama/CodeLlama LoRA
+
 Example of fine-tuning Llama-2-7b-chat-hf with HotpotQA trajectories:
 
 (This command was tested on single RTX 4090 24GB GPU)
 
 ```
-python llama_lora/finetune.py \
+cd finetune/llama_lora
+python finetune.py \
      --base_model meta-llama/Llama-2-7b-chat-hf \
-     --data_path ../finetune/alpaca_format/hotpotqa.json\
+     --data_path ../../data/finetune/alpaca_format/hotpotqa.json\
      --micro_batch_size 16 \
      --num_epochs 30 \
      --output_dir ../models/lora/[LORA NAME] \
@@ -38,14 +28,16 @@ python llama_lora/finetune.py \
 
 
 #### Llama/CodeLlama Full Model
+
 Example of fine-tuning Llama-2-7b-chat-hf with HotpotQA trajectories:
 
 (This command was tested on four A100 80GB GPUs)
 
 ```
-torchrun --nnodes 1 --nproc_per_node 4 llama_full/train.py \
+cd finetune/llama_full
+torchrun --nnodes 1 --nproc_per_node 4 train.py \
     --model_name_or_path meta-llama/Llama-2-7b-chat-hf \
-    --data_path ../finetune/alpaca_format/hotpotqa.json \
+    --data_path ../../data/finetune/alpaca_format/hotpotqa.json \
     --bf16 True \
     --output_dir ../models/full_models/[FULL MODEL NAME] \
     --num_train_epochs 30 \
@@ -66,7 +58,7 @@ torchrun --nnodes 1 --nproc_per_node 4 llama_full/train.py \
     --tf32 True
 ```
 
-#### GPT
+#### OpenAI GPT-3.5
 
 See [OpenAI Fine-tuning Guide](https://platform.openai.com/docs/guides/fine-tuning)
 
