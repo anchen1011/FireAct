@@ -4,7 +4,7 @@
     <a href="https://www.python.org/">
         <img alt="Build" src="https://img.shields.io/badge/Python-3.7+-1f425f.svg?color=blue">
     </a>
-    <a href="https://copyright.princeton.edu/policy">
+    <a href="https://github.com/anchen1011/FireAct/blob/main/LICENSE">
         <img alt="License" src="https://img.shields.io/badge/License-MIT-blue">
     </a>
     <a href="https://huggingface.co/forestai/fireact_llama_2_7b" target="_blank">
