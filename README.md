@@ -2,10 +2,13 @@
 
 <p>
     <a href="https://www.python.org/">
-        <img alt="Build" src="https://img.shields.io/badge/Python-3.7+-1f425f.svg?color=purple">
+        <img alt="Build" src="https://img.shields.io/badge/Python-3.7+-1f425f.svg?color=blue">
     </a>
     <a href="https://copyright.princeton.edu/policy">
         <img alt="License" src="https://img.shields.io/badge/License-MIT-blue">
+    </a>
+    <a href="https://huggingface.co/forestai/fireact_llama_2_7b" target="_blank">
+        <img alt="Hugging Face" src="https://img.shields.io/badge/%F0%9F%A4%97%20-Hugging%20Face-blue?color=blue&logoColor=white" />
     </a>
     <a href="https://zenodo.org/badge/latestdoi/642099326">
         <img src="https://zenodo.org/badge/642099326.svg">
@@ -15,10 +18,17 @@
 ![teaser](teaser.png)
 
 
-This repository is based on our publication *FireAct: Toward Language Agent Fine-tuning* ([PDF](https://fireact-agent.github.io)). It contains prompts, demo code and fine-tuning data we generated. It also includes the description and directory for the model family we fine-tuned. If you use this code or data in your work, please cite:
+This repository is based on our publication *FireAct: Toward Language Agent Fine-tuning* ([PDF](https://browse.arxiv.org/pdf/2310.05915.pdf)). It contains prompts, demo code and fine-tuning data we generated. It also includes the description and directory for the model family we fine-tuned. If you use this code or data in your work, please cite:
 
 ```
-Bibtex code
+@misc{chen2023fireact,
+      title={FireAct: Toward Language Agent Fine-tuning}, 
+      author={Baian Chen and Chang Shu and Ehsan Shareghi and Nigel Collier and Karthik Narasimhan and Shunyu Yao},
+      year={2023},
+      eprint={2310.05915},
+      archivePrefix={arXiv},
+      primaryClass={cs.CL}
+}
 ```
 
 ## Overview
