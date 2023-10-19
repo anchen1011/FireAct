@@ -31,6 +31,8 @@ This repository is based on our publication *FireAct: Toward Language Agent Fine
 }
 ```
 
+Contact: anchen1011@gmail.com
+
 ## Overview
 - Define tools in `tools/`
 - Define tasks in `tasks/`
