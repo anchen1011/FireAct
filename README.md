@@ -10,9 +10,6 @@
     <a href="https://huggingface.co/forestai/fireact_llama_2_7b" target="_blank">
         <img alt="Hugging Face" src="https://img.shields.io/badge/%F0%9F%A4%97%20-Hugging%20Face-blue?color=blue&logoColor=white" />
     </a>
-    <a href="https://zenodo.org/badge/latestdoi/642099326">
-        <img src="https://zenodo.org/badge/642099326.svg">
-    </a>
 </p>
 
 ![teaser](teaser.png)
